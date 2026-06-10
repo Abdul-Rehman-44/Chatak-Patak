@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — Chatak Patak red + yellow street-food identity */
+  --color-cream: #fff7ec;
+  --color-charcoal: #201611;
+  --color-chili: #e11d2a;
+  --color-chili-dark: #a50f1d;
+  --color-ember: #ff6a2b;
+  --color-mango: #ffc12e;
+  --color-mango-light: #ffd866;
+  --color-mint: #1fae73;
+
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-poppins);
+
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-float-slow: float 7s ease-in-out infinite;
+  --animate-spin-slow: spin 18s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+:root {
+  --background: #fff7ec;
+  --foreground: #201611;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle dotted texture used behind hero / banners */
+.bg-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
