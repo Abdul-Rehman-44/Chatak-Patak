@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import type { Product } from "../lib/products";
 import { formatPKR } from "../lib/products";
@@ -19,14 +20,27 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-3xl border border-charcoal/10 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-chili/10">
       <div
-        className={`relative flex h-40 items-center justify-center bg-gradient-to-br ${product.gradient}`}
+        className={`relative flex h-56 w-full items-center justify-center bg-gradient-to-br overflow-hidden ${product.gradient}`}
       >
-        <span className="bg-dots absolute inset-0 opacity-40" aria-hidden />
-        <span className="relative text-6xl drop-shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
-          {product.emoji}
-        </span>
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        ) : (
+          <>
+            <span className="bg-dots absolute inset-0 opacity-40" aria-hidden />
+            <span className="relative text-7xl drop-shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
+              {product.emoji}
+            </span>
+          </>
+        )}
+        
         {product.tag && (
-          <span className="absolute left-3 top-3 rounded-full bg-charcoal px-3 py-1 text-xs font-bold text-cream shadow">
+          <span className="absolute left-3 top-3 rounded-full bg-charcoal px-3 py-1 text-xs font-bold text-cream shadow z-10">
             {product.tag}
           </span>
         )}

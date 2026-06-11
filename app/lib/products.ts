@@ -13,6 +13,7 @@ export type Product = {
   tag?: string;
   /** tailwind gradient classes used for the card's visual */
   gradient: string;
+  image?: string;
 };
 
 export const products: Product[] = [
@@ -27,6 +28,7 @@ export const products: Product[] = [
     spice: 4,
     tag: "Bestseller",
     gradient: "from-amber-300 via-orange-400 to-rose-500",
+    image: "/products/kurkure-classic.png",
   },
   {
     id: "lays-mayo",
@@ -38,6 +40,7 @@ export const products: Product[] = [
     category: "bowls",
     spice: 2,
     gradient: "from-yellow-300 via-amber-400 to-orange-400",
+    image: "/products/lays-mayo.png",
   },
   {
     id: "nachos-cheese",
@@ -50,6 +53,7 @@ export const products: Product[] = [
     spice: 2,
     tag: "Family Fav",
     gradient: "from-amber-200 via-yellow-400 to-orange-500",
+    image: "/products/nachos-cheese.png",
   },
   {
     id: "spicy-volcano",
@@ -62,6 +66,7 @@ export const products: Product[] = [
     spice: 5,
     tag: "🔥 Extreme",
     gradient: "from-orange-500 via-red-600 to-rose-700",
+    image: "/products/spicy-volcano.png",
   },
   {
     id: "chicken-chatak",
@@ -74,6 +79,7 @@ export const products: Product[] = [
     spice: 3,
     tag: "Signature",
     gradient: "from-rose-400 via-red-500 to-orange-600",
+    image: "/products/chicken-chatak.png",
   },
   {
     id: "creamy-blast",
@@ -85,6 +91,7 @@ export const products: Product[] = [
     category: "bowls",
     spice: 2,
     gradient: "from-amber-200 via-orange-300 to-rose-400",
+    image: "/products/creamy-blast.png",
   },
   {
     id: "tangy-twist",
@@ -96,6 +103,7 @@ export const products: Product[] = [
     category: "bowls",
     spice: 3,
     gradient: "from-lime-300 via-amber-300 to-orange-400",
+    image: "/products/tangy-twist.png",
   },
   {
     id: "monsoon-masala",
@@ -108,6 +116,7 @@ export const products: Product[] = [
     spice: 4,
     tag: "Seasonal",
     gradient: "from-orange-300 via-red-400 to-rose-600",
+    image: "/products/monsoon-masala.png",
   },
   {
     id: "mint-lemonade",
@@ -117,6 +126,7 @@ export const products: Product[] = [
     description: "Ice-cold fresh mint & lemon cooler to calm the Dhamaka heat.",
     category: "drinks",
     gradient: "from-emerald-300 via-lime-300 to-yellow-300",
+    image: "/products/mint-lemonade.png",
   },
   {
     id: "doodh-soda",
@@ -126,6 +136,7 @@ export const products: Product[] = [
     description: "The desi creamy soda classic — sweet, fizzy & full nostalgia.",
     category: "drinks",
     gradient: "from-sky-200 via-rose-200 to-amber-200",
+    image: "/products/doodh-soda.png",
   },
   {
     id: "chilled-cola",
@@ -135,6 +146,7 @@ export const products: Product[] = [
     description: "The classic fizzy companion to every Dhamaka bowl.",
     category: "drinks",
     gradient: "from-zinc-700 via-red-700 to-orange-600",
+    image: "/products/chilled-cola.png",
   },
   {
     id: "lunch-rush",
@@ -146,6 +158,7 @@ export const products: Product[] = [
     category: "combos",
     tag: "Save PKR 40",
     gradient: "from-amber-300 via-orange-500 to-red-600",
+    image: "/products/lunch-rush.png",
   },
   {
     id: "triple-threat",
@@ -157,6 +170,7 @@ export const products: Product[] = [
     category: "combos",
     tag: "For Sharing",
     gradient: "from-yellow-400 via-orange-500 to-rose-600",
+    image: "/products/triple-threat.png",
   },
 ];
 
