@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { products } from "./lib/products";
 import { ProductCard } from "./components/product-card";
+import { SeasonalRecommendation } from "./components/seasonal-recommendation";
 
 const features = [
   {
@@ -80,12 +81,24 @@ export default function Home() {
               Customisable chip-bowls loaded with chaat, sauces & grilled
               chicken. Crunchy, spicy, selfie-worthy — built fresh in 5 minutes.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row md:items-start">
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row md:items-start flex-wrap">
               <Link
                 href="/products"
                 className="flex h-13 w-full items-center justify-center rounded-full bg-charcoal px-8 py-3.5 text-base font-bold text-cream shadow-lg transition-transform hover:-translate-y-0.5 sm:w-auto"
               >
                 Order Now 🛒
+              </Link>
+              <Link
+                href="/build"
+                className="flex h-13 w-full items-center justify-center rounded-full bg-emerald-500 px-8 py-3.5 text-base font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5 sm:w-auto"
+              >
+                Build Your Bowl 🥗
+              </Link>
+              <Link
+                href="/quiz"
+                className="flex h-13 w-full items-center justify-center rounded-full bg-mango px-8 py-3.5 text-base font-bold text-charcoal shadow-lg transition-transform hover:-translate-y-0.5 sm:w-auto"
+              >
+                Take Quiz 🥣
               </Link>
               <Link
                 href="/products"
@@ -123,6 +136,8 @@ export default function Home() {
         {/* curved divider */}
         <div className="h-10 rounded-t-[2.5rem] bg-cream" />
       </section>
+
+      <SeasonalRecommendation />
 
       {/* Feature strip */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
@@ -271,12 +286,20 @@ export default function Home() {
               Tap through the menu, stack your cart and bring the Dhamaka to your
               day.
             </p>
-            <Link
-              href="/products"
-              className="mt-7 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-base font-bold text-chili shadow-lg transition-transform hover:-translate-y-0.5"
-            >
-              Order Now 🛒
-            </Link>
+            <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link
+                href="/products"
+                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-base font-bold text-chili shadow-lg transition-transform hover:-translate-y-0.5"
+              >
+                Order Now 🛒
+              </Link>
+              <Link
+                href="/quiz"
+                className="inline-flex items-center justify-center rounded-full bg-charcoal px-8 py-3.5 text-base font-bold text-cream shadow-lg transition-transform hover:-translate-y-0.5"
+              >
+                Take the Personality Quiz 🥣
+              </Link>
+            </div>
           </div>
         </div>
       </section>
